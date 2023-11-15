@@ -56,3 +56,5 @@ INSERT INTO `art`.`artspaces` (`name`, `country`, `city`, `category`) VALUES ('M
 SELECT * FROM artwork;
 SELECT * FROM artspaces;
 SELECT * FROM artist;
+
+DELETE FROM artwork WHERE id=19;

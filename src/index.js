@@ -34,7 +34,7 @@ async function getConnection() {
 
 /***** ENPOINTS *****/
 
-// 1. Insertar una entrada en su entidad principal.
+// 1. Insertar una entrada en la entidad principal.
 
 //Añadir una nueva obra de arte (POST)
 server.post('/artwork', async (req, res) => {
@@ -101,7 +101,7 @@ server.get('/artwork', async (req, res) => {
     console.error('Error:', error);
     res.status(500).json({ error: 'Hubo un error al obtener los datos.' });
   } finally {
-    conn.release(); 
+    conn.release(); // Cierro conexión
   }
 });
 
@@ -137,7 +137,7 @@ server.put('/artwork/:id', async (req, res) => {
     console.error('Error:', error);
     res.status(500).json({ success: false, error: 'Error al actualizar el artwork.' });
   } finally {
-    conn.release();
+    conn.release();// Cierro conexión
   }
 });
 
