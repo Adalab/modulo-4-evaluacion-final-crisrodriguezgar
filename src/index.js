@@ -64,6 +64,7 @@ server.post('/artwork', async (req, res) => {
     res.json({
       success: true,
       id: artworkList.insertId,
+      message: `La obra de arte se ha insertado correctamente`
     });
   } catch (error) {
     res.json({
@@ -137,6 +138,7 @@ server.get('/artwork/:id', async (req, res) => {
         message: 'la obra de arte que buscas no existe.',
       });
       return;
+      
     }
     res.json({
       artworkList: artworkList[0],
@@ -148,7 +150,7 @@ server.get('/artwork/:id', async (req, res) => {
       message: 'Ha ocurrido un error.',
     });
   } finally {
-    conn.release(); // Cierro conexión
+    conn.end(); // Cierro conexión
   }
 });
 
@@ -197,7 +199,7 @@ server.put('/artwork/:id', async (req, res) => {
     console.error('Error:', error);
     res.status(500).json({ success: false, error: 'Error al actualizar el artwork.' });
   } finally {
-    conn.release();// Cierro conexión
+    conn.end();// Cierro conexión
   }
 });
 
@@ -225,7 +227,7 @@ server.delete('/artwork/:id', async (req, res) => {
     } else {
       res.status(404).json({
         success: false,
-        message: 'No se encontró el artwork con el ID especificado',
+        message: 'No se encontró la obra de arte con el ID especificado, por tanto no se ha podido eliminar',
       });
     }
   } catch (error) {
@@ -233,6 +235,6 @@ server.delete('/artwork/:id', async (req, res) => {
     console.error('Error:', error);
     res.status(500).json({ success: false, error: 'Error al eliminar el artwork.' });
   } finally {
-    conn.release(); // Cierro conexión
+    conn.end(); // Cierro conexión
   }
 });
