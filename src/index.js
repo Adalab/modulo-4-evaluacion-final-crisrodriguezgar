@@ -75,7 +75,7 @@ server.post('/artwork', async (req, res) => {
 
 //2. Leer/Listar todas las entradas existentes.
 
-//Obtener toda INFO de las obras de arte (GET)
+//Obtener toda INFO de las tablas (GET)
 server.get('/artwork', async (req, res) => {
   const conn = await getConnection();
 
@@ -106,7 +106,67 @@ server.get('/artwork', async (req, res) => {
 });
 
 
+//Obtener la INFO de una obra (GET)
+/* Ejemplo
+
+http://localhost:4001/artwork/12*/
+
+server.get('/artwork/:id', async (req, res) => {
+  const idArtwork = req.params.id;
+  let conn;
+
+  try {
+    if (isNaN(parseInt(idArtwork))) {
+      res.json({
+        success: false,
+        error: 'To find your spell the id must be a number',
+      });
+      return;
+    }
+
+    let queryArtwork = 'SELECT * FROM artwork WHERE id =?';
+
+    conn = await getConnection();
+
+    const [artworkList] = await conn.query(queryArtwork, [idArtwork]);
+    const numOfArtwork = artworkList.length;
+
+    if (numOfArtwork === 0) {
+      res.json({
+        success: false,
+        message: 'la obra de arte que buscas no existe.',
+      });
+      return;
+    }
+    res.json({
+      artworkList: artworkList[0],
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      success: false,
+      message: 'Ha ocurrido un error.',
+    });
+  } finally {
+    conn.release(); // Cierro conexión
+  }
+});
+
 //3. Actualizar una obra de arte ya existente.
+
+/*Ejemplo
+
+http://localhost:4001/artwork/20
+
+{
+      "title": "La Anunciación",
+      "style": "Quattrocento",
+      "year": 1435,
+      "image": null,
+      "description": "Frescos divinos capturan el anuncio celestial a la Virgen María."
+    }
+
+*/
 
 server.put('/artwork/:id', async (req, res) => {
   const dataArtwork = req.body;
@@ -144,6 +204,9 @@ server.put('/artwork/:id', async (req, res) => {
 
 //4. Eliminar una obra de arte existente.
 
+/* Ejemplo 
+  http://localhost:4001/artwork/22
+*/
 
 server.delete('/artwork/:id', async (req, res) => {
   const idArtwork = req.params.id;

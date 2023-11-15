@@ -85,5 +85,13 @@ ADD COLUMN artspaces_id INT,
 ADD FOREIGN KEY (artist_id) REFERENCES artists(id),
 ADD FOREIGN KEY (artspaces_id) REFERENCES artspaces(id);
 
+UPDATE `art`.`artwork` SET `artist_id` = '1', `artspaces_id` = '11' WHERE (`id` = '12');
+UPDATE `art`.`artwork` SET `artist_id` = '3' WHERE (`id` = '13');
+UPDATE `art`.`artwork` SET `artist_id` = '2' WHERE (`id` = '14');
+UPDATE `art`.`artwork` SET `artist_id` = '4' WHERE (`id` = '15');
+UPDATE `art`.`artwork` SET `artist_id` = '5' WHERE (`id` = '16');
+UPDATE `art`.`artwork` SET `artist_id` = '6' WHERE (`id` = '17');
+UPDATE `art`.`artwork` SET `artist_id` = '7' WHERE (`id` = '18');
+
 
 
