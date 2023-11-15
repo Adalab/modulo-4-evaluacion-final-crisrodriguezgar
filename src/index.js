@@ -144,3 +144,32 @@ server.put('/artwork/:id', async (req, res) => {
 
 //4. Eliminar una obra de arte existente.
 
+
+server.delete('/artwork/:id', async (req, res) => {
+  const idArtwork = req.params.id;
+  let queryArtwork = 'DELETE FROM artwork WHERE id=?';
+
+  const conn = await getConnection();
+
+  try {
+    const [artworkList] = await conn.query(queryArtwork, [idArtwork]);
+
+    if (artworkList.affectedRows > 0) {
+      res.json({
+        success: true,
+        message: 'Eliminado correctamente',
+      });
+    } else {
+      res.status(404).json({
+        success: false,
+        message: 'No se encontró el artwork con el ID especificado',
+      });
+    }
+  } catch (error) {
+    // Manejo de errores
+    console.error('Error:', error);
+    res.status(500).json({ success: false, error: 'Error al eliminar el artwork.' });
+  } finally {
+    conn.release(); // Cierro conexión
+  }
+});

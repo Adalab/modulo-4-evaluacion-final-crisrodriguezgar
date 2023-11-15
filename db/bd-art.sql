@@ -57,4 +57,8 @@ SELECT * FROM artwork;
 SELECT * FROM artspaces;
 SELECT * FROM artist;
 
+ALTER TABLE `art`.`artwork` 
+CHANGE COLUMN `title` `title` VARCHAR(40) NOT NULL ;
+
 DELETE FROM artwork WHERE id=19;
+
