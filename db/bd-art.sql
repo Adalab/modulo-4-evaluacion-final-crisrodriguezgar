@@ -54,3 +54,5 @@ INSERT INTO `art`.`artspaces` (`name`, `country`, `city`, `category`) VALUES ('M
 INSERT INTO `art`.`artspaces` (`name`, `country`, `city`, `category`) VALUES ('Museo del Louvre', 'Francia', 'París', 'Museo');
 
 SELECT * FROM artwork;
+SELECT * FROM artspaces;
+SELECT * FROM artist;
