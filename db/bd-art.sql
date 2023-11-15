@@ -93,5 +93,7 @@ UPDATE `art`.`artwork` SET `artist_id` = '5' WHERE (`id` = '16');
 UPDATE `art`.`artwork` SET `artist_id` = '6' WHERE (`id` = '17');
 UPDATE `art`.`artwork` SET `artist_id` = '7' WHERE (`id` = '18');
 
+SELECT * FROM artwork WHERE id =12;
+
 
 
