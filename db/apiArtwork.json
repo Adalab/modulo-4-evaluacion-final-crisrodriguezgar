@@ -1,0 +1,215 @@
+{
+    "info": {
+      "count": 12
+    },
+    "artworkList": [
+      {
+        "id": 12,
+        "title": "La Mona Lisa",
+        "style": "Renacimiento",
+        "year": 1517,
+        "image": null,
+        "description": "Retrato de una mujer con una enigmática sonrisa",
+        "artist_id": 1,
+        "artspaces_id": 11
+      },
+      {
+        "id": 13,
+        "title": "Noche Estrellada",
+        "style": "Postimpresionismo",
+        "year": 1889,
+        "image": null,
+        "description": "Paisaje nocturno con un cielo estrellado",
+        "artist_id": 3,
+        "artspaces_id": null
+      },
+      {
+        "id": 14,
+        "title": "Guernica",
+        "style": "Cubismo",
+        "year": 1937,
+        "image": null,
+        "description": "Pintura que representa el bombardeo de la ciudad de Guernica durante la Guerra Civil Española",
+        "artist_id": 2,
+        "artspaces_id": null
+      },
+      {
+        "id": 15,
+        "title": "Las Meninas",
+        "style": "Barroco",
+        "year": 1656,
+        "image": null,
+        "description": "Pintura que muestra a la infanta Margarita y su séquito con la presencia del propio pintor",
+        "artist_id": 4,
+        "artspaces_id": null
+      },
+      {
+        "id": 16,
+        "title": "El tres de mayo",
+        "style": "Romanticismo",
+        "year": 1814,
+        "image": null,
+        "description": "Representa la ejecución de ciudadanos españoles por parte de soldados franceses durante la ocupación de España por Napoleón.",
+        "artist_id": 5,
+        "artspaces_id": null
+      },
+      {
+        "id": 17,
+        "title": "La visión después del sermón",
+        "style": "Postimpresionismo",
+        "year": 1897,
+        "image": null,
+        "description": "Representación de mujeres bretonas en un momento de fervor religioso después de escuchar un sermón sobre la lucha de Jacob con el ángel en el Antiguo Testamento.",
+        "artist_id": 6,
+        "artspaces_id": null
+      },
+      {
+        "id": 18,
+        "title": "Ceci n'est pas une pipe",
+        "style": "Surrealismo",
+        "year": 1929,
+        "image": null,
+        "description": "Pintura de una pipa con el texto \"Esto no es una pipa\" en francés.",
+        "artist_id": 7,
+        "artspaces_id": null
+      },
+      {
+        "id": 20,
+        "title": "La Anunciación",
+        "style": "Quattrocento",
+        "year": 1435,
+        "image": null,
+        "description": "Frescos divinos capturan el anuncio celestial a la Virgen María.",
+        "artist_id": null,
+        "artspaces_id": null
+      },
+      {
+        "id": 23,
+        "title": "La Anunciación",
+        "style": "Quattrocento",
+        "year": 1435,
+        "image": null,
+        "description": "Frescos divinos capturan el anuncio celestial a la Virgen María.",
+        "artist_id": null,
+        "artspaces_id": null
+      },
+      {
+        "id": 24,
+        "title": "La Anunciación",
+        "style": "Quattrocento",
+        "year": 1435,
+        "image": null,
+        "description": "Frescos divinos capturan el anuncio celestial a la Virgen María.",
+        "artist_id": null,
+        "artspaces_id": null
+      },
+      {
+        "id": 25,
+        "title": "La Anunciación",
+        "style": "Quattrocento",
+        "year": 1435,
+        "image": null,
+        "description": "Frescos divinos capturan el anuncio celestial a la Virgen María.",
+        "artist_id": null,
+        "artspaces_id": null
+      },
+      {
+        "id": 27,
+        "title": "La Anunciación",
+        "style": "Quattrocento",
+        "year": 1435,
+        "image": null,
+        "description": "Frescos divinos capturan el anuncio celestial a la Virgen María.",
+        "artist_id": null,
+        "artspaces_id": null
+      }
+    ],
+    "artspacesList": [
+      {
+        "id": 6,
+        "name": "Los Ángeles County Museum",
+        "country": "EEUU",
+        "city": "Los Angeles",
+        "category": "Museo"
+      },
+      {
+        "id": 7,
+        "name": "Museo de Bellas Artes",
+        "country": "EEUU",
+        "city": "Boston",
+        "category": "Museo"
+      },
+      {
+        "id": 8,
+        "name": "Museo del Prado",
+        "country": "España",
+        "city": "Madrid",
+        "category": "Museo"
+      },
+      {
+        "id": 9,
+        "name": "Museo Reina Sofía",
+        "country": "España",
+        "city": "Madrid",
+        "category": "Museo"
+      },
+      {
+        "id": 10,
+        "name": "Museo de Arte Moderno",
+        "country": "EEUU",
+        "city": "Nueva York",
+        "category": "Museo"
+      },
+      {
+        "id": 11,
+        "name": "Museo del Louvre",
+        "country": "Francia",
+        "city": "París",
+        "category": "Museo"
+      }
+    ],
+    "artArtistList": [
+      {
+        "id": 1,
+        "name": "Leonardo da Vinci",
+        "nacionality": "Italiano",
+        "style": "Renacimiento"
+      },
+      {
+        "id": 2,
+        "name": "Pablo Picasso",
+        "nacionality": "Español",
+        "style": "Varios"
+      },
+      {
+        "id": 3,
+        "name": "Vincent van Gogh",
+        "nacionality": "Holandés",
+        "style": "Postimpresionismo"
+      },
+      {
+        "id": 4,
+        "name": "Diego Velázquez",
+        "nacionality": "Español",
+        "style": "Barroco"
+      },
+      {
+        "id": 5,
+        "name": "Francisco de Goya",
+        "nacionality": "Español",
+        "style": "Varios"
+      },
+      {
+        "id": 6,
+        "name": "Paul Gauguin",
+        "nacionality": "Francés",
+        "style": "Postimpresionismo"
+      },
+      {
+        "id": 7,
+        "name": "René Magritte",
+        "nacionality": "Belga",
+        "style": "Surrealismo"
+      }
+    ]
+  }
