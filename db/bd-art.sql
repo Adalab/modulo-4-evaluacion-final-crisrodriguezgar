@@ -22,7 +22,7 @@ CREATE TABLE artist (
     );
 ALTER TABLE artist DROP COLUMN lastname;
     
-CREATE TABLE ArtSpaces (
+CREATE TABLE artSpaces (
     id INT auto_increment primary key,
     name VARCHAR(30) not null,
     country VARCHAR(30),
@@ -61,4 +61,29 @@ ALTER TABLE `art`.`artwork`
 CHANGE COLUMN `title` `title` VARCHAR(40) NOT NULL ;
 
 DELETE FROM artwork WHERE id=19;
+
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+-- -----------------------------------------------------
+-- Schema art
+-- -----------------------------------------------------
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+ALTER TABLE artwork
+ADD COLUMN artist_id INT,
+ADD COLUMN artspaces_id INT,
+ADD FOREIGN KEY (artist_id) REFERENCES artists(id),
+ADD FOREIGN KEY (artspaces_id) REFERENCES artspaces(id);
+
+
 
