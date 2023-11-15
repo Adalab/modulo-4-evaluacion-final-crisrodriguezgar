@@ -102,7 +102,7 @@ server.get('/artwork', async (req, res) => {
     console.error('Error:', error);
     res.status(500).json({ error: 'Hubo un error al obtener los datos.' });
   } finally {
-    conn.release(); // Cierro conexión
+    conn.end(); // Cierro conexión
   }
 });
 

@@ -18,7 +18,7 @@ La API de Arte proporciona los siguientes endpoints:
 
 ```bash         
 GET/artwork
-```bash
+```
 Este endpoint devuelve una lista de todas las obras de arte de la base de datos:
 
 ```bash         
